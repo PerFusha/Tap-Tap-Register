@@ -50,3 +50,24 @@ function visiblePass2() {
     }
 }
 document.getElementById("checkPass2").onchange = visiblePass2;
+
+let clickCount = 0;
+let con = document.getElementById("contacts")
+let vk = document.getElementById("vk")
+let tg = document.getElementById("tg")
+
+con.addEventListener("click", function(){
+    clickCount++;
+    if (clickCount % 2 === 1) {
+        vk.classList.remove("contVkBack");
+        tg.classList.remove("contTgBack");
+        vk.classList.add("contVk")
+        tg.classList.add("contTg");
+    } else {
+        vk.classList.remove("contVk");
+        tg.classList.remove("contTg");
+        vk.classList.add("contVkBack")
+        tg.classList.add("contTgBack");
+    return true;
+    }
+});

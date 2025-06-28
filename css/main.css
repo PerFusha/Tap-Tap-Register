@@ -16,7 +16,7 @@ body, input{
     font-style: normal;
 }
 #reg{
-    margin-left: 5%;
+    margin-left: 11%;
     box-shadow: 0 0 30px #ECCD25;
     justify-content: center;
     align-items: center;
@@ -65,10 +65,15 @@ body, input{
     font-size: 19px;
 }
 #flattershay{
-    position: relative;
     display: flex;
     left: 0;
     filter: drop-shadow(0 0 12px #ED80B3);
+}
+@media (max-width: 1520px) {
+    #flattershay {
+        width: 50%;
+        height: 50%;
+    }
 }
 span{
     justify-content: center;
@@ -100,4 +105,106 @@ input[type="checkbox"]:checked {
     accent-color: #FFF798;
 
 }
-
+#contacts{
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: black 0 0 6px;
+    top: 9vh;
+    right: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 115%;
+    background-position: center;
+    background-image: url("https://img.icons8.com/?size=100&id=1806&format=png&color=000000");
+    display: flex;
+    flex-direction: row;
+    height: 6.5vh;
+    width: 1.7vh;
+    border-radius: 1.5vh 0 0 1.5vh;
+    background-color: white;
+    border-left: black solid 1px;
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;
+}
+#vk{
+    z-index: 0;
+    top: 9.75vh;
+    right: -5vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    display: flex;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 100%;
+    box-shadow: black 0 0 6px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/800px-VK_Compact_Logo_%282021-present%29.svg.png");
+}
+#tg{
+    z-index: 0;
+    top: 9.75vh;
+    right: -5vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    display: flex;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 100%;
+    box-shadow: black 0 0 6px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/2048px-Telegram_2019_Logo.svg.png");
+}
+.contTg{
+    animation: tg 0.5s 1 forwards;
+}
+.contVk {
+    animation: vk 0.5s 1 forwards;
+}
+.contTgBack {
+    animation: tgBack 0.5s 1 forwards;
+}
+.contVkBack {
+    animation: vkBack 0.5s 1 forwards;
+}
+@keyframes vk {
+    0%{
+        top: 9.75vh;
+        right: -5vh;
+    }
+    100%{
+        top: 9.75vh;
+        right: 3.7vh;
+    }
+}
+@keyframes tgBack {
+    0%{
+        top: 9.75vh;
+        right: 10.7vh;
+    }
+    100%{
+        top: 9.75vh;
+        right: -5vh;
+    }
+}
+@keyframes vkBack {
+    0%{
+        top: 9.75vh;
+        right: 3.7vh;
+    }
+    100%{
+        top: 9.75vh;
+        right: -5vh;
+    }
+}
+@keyframes tg {
+    0%{
+        top: 9.75vh;
+        right: -5vh;
+    }
+    100%{
+        top: 9.75vh;
+        right: 10.7vh;
+    }
+}

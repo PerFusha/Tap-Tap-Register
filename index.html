@@ -7,30 +7,36 @@
     <title>Tap-Tap</title>
 </head>
 <body>
+<div id="contacts"></div>
+<a href="https://vk.com/p3rfushka" target="_blank"><div id="vk"></div></a>
+<a href="https://t.me/PerF1LLLY" target="_blank"><div id="tg"></div></a>
 <img src="css/img/flattershay.png" alt = "flattershay" id="flattershay">
 <div id="reg">
     <a id="reg-title">Registration</a>
     <form id="reg-form" method="post">
             <span>
-                <input type="text" name="username" placeholder="Username" class="input">
+                <input type="text" name="username" placeholder="Username" class="input" id="username">
             </span>
-                <a>Your username</a>
+                <label for="username"><a>Your username</a></label>
             <span>
                 <input type="password" name="pass" placeholder="Password" class="input" id="pass">
                 <input type="checkbox" name="checkPass" id="checkPass">
+                <label for="checkPass"></label>
             </span>
-                <a>Your password</a>
+                <label for="pass"><a>Your password</a></label>
             <span>
                 <input type="password" name="conf_pass" placeholder="Confirm Password" class="input" id="conf_pass">
                 <input type="checkbox" name="checkPass2" id="checkPass2">
+                <label for="checkPass2"></label>
             </span>
-                <a>Confirm your password</a>
+                <label for="conf_pass"><a>Confirm your password</a></label>
             <span>
-                <input type="email" name="email" placeholder="Email" class="input">
+                <input type="email" name="email" placeholder="Email" class="input" id="email">
             </span>
-                <a id="last">Your email</a>
+                <label for="email"><a id="last">Your email</a></label>
             <a id="error"></a>
             <input type="submit" value="Register" id="register">
+                <label for="register"></label>
     </form>
 </div>
 <script src="js/main.js"></script>
