@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="css/img/icon.png">
+    <meta charset="UTF-8">
+    <title>Tap-Tap</title>
+</head>
+<body>
+<img src="css/img/flattershay.png" alt = "flattershay" id="flattershay">
+<div id="reg">
+    <a id="reg-title">Registration</a>
+    <form id="reg-form" method="post">
+            <span>
+                <input type="text" name="username" placeholder="Username" class="input">
+            </span>
+                <a>Your username</a>
+            <span>
+                <input type="password" name="pass" placeholder="Password" class="input" id="pass">
+                <input type="checkbox" name="checkPass" id="checkPass">
+            </span>
+                <a>Your password</a>
+            <span>
+                <input type="password" name="conf_pass" placeholder="Confirm Password" class="input" id="conf_pass">
+                <input type="checkbox" name="checkPass2" id="checkPass2">
+            </span>
+                <a>Confirm your password</a>
+            <span>
+                <input type="email" name="email" placeholder="Email" class="input">
+            </span>
+                <a id="last">Your email</a>
+            <a id="error"></a>
+            <input type="submit" value="Register" id="register">
+    </form>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
