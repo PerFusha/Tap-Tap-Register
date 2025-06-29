@@ -29,29 +29,37 @@ function checkForm(event) {
     window.location = "https://google.com";
 }
 //Видимость пароля
-function visiblePass() {
-    let x = document.getElementById("checkPass").checked;
-    if (x === true) {
+document.getElementById("checkPass").addEventListener("click", function() {
+    clickCountReg++
+    if (clickCountReg % 2 === 1){
         document.getElementById("pass").type = "text";
-    }
-    else {
+        document.getElementById("checkPass").src = "css/img/invisible.png";
+    }else{
         document.getElementById("pass").type = "password";
+        document.getElementById("checkPass").src = "css/img/visible.png";
     }
-}
+    return true;
+});
 //Видимость повтора пароля
-document.getElementById("checkPass").onchange = visiblePass;
-function visiblePass2() {
-    let x = document.getElementById("checkPass2").checked;
-    if (x === true) {
+document.getElementById("checkPass2").addEventListener("click", function() {
+    clickCountReg2++
+    if (clickCountReg2 % 2 === 1){
         document.getElementById("conf_pass").type = "text";
-    }
-    else {
+        document.getElementById("checkPass2").src = "css/img/invisible.png";
+    }else{
         document.getElementById("conf_pass").type = "password";
+        document.getElementById("checkPass2").src = "css/img/visible.png";
     }
-}
-document.getElementById("checkPass2").onchange = visiblePass2;
+    return true;
+});
+
+
+
+document.getElementById("checkPass2")
 
 let clickCount = 0;
+let clickCountReg = 0;
+let clickCountReg2 = 0;
 let con = document.getElementById("contacts")
 let vk = document.getElementById("vk")
 let tg = document.getElementById("tg")
@@ -61,6 +69,8 @@ con.addEventListener("click", function(){
     if (clickCount % 2 === 1) {
         vk.classList.remove("contVkBack");
         tg.classList.remove("contTgBack");
+        vk.style.display = "block";
+        tg.style.display = "block";
         vk.classList.add("contVk")
         tg.classList.add("contTg");
     } else {
@@ -68,6 +78,6 @@ con.addEventListener("click", function(){
         tg.classList.remove("contTg");
         vk.classList.add("contVkBack")
         tg.classList.add("contTgBack");
-    return true;
+        return true;
     }
 });

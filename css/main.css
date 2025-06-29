@@ -66,7 +66,6 @@ body, input{
 }
 #flattershay{
     display: flex;
-    left: 0;
     filter: drop-shadow(0 0 12px #ED80B3);
 }
 @media (max-width: 1520px) {
@@ -101,15 +100,11 @@ span img{
 #last{
     margin-bottom: 2%;
 }
-input[type="checkbox"]:checked {
-    accent-color: #FFF798;
-
-}
 #contacts{
     z-index: 1;
     cursor: pointer;
     box-shadow: black 0 0 6px;
-    top: 9vh;
+    top: 10vh;
     right: 0;
     position: absolute;
     background-repeat: no-repeat;
@@ -134,7 +129,6 @@ input[type="checkbox"]:checked {
     background-size: cover;
     background-position: center;
     position: absolute;
-    display: flex;
     width: 5vh;
     height: 5vh;
     border-radius: 100%;
@@ -149,12 +143,14 @@ input[type="checkbox"]:checked {
     background-size: cover;
     background-position: center;
     position: absolute;
-    display: flex;
     width: 5vh;
     height: 5vh;
     border-radius: 100%;
     box-shadow: black 0 0 6px;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/2048px-Telegram_2019_Logo.svg.png");
+}
+#checkPass{
+    display: flex;
 }
 .contTg{
     animation: tg 0.5s 1 forwards;
@@ -170,41 +166,77 @@ input[type="checkbox"]:checked {
 }
 @keyframes vk {
     0%{
-        top: 9.75vh;
+        top: 10.75vh;
         right: -5vh;
     }
     100%{
-        top: 9.75vh;
+        top: 10.75vh;
         right: 3.7vh;
     }
 }
 @keyframes tgBack {
     0%{
-        top: 9.75vh;
+        top: 10.75vh;
         right: 10.7vh;
     }
     100%{
-        top: 9.75vh;
+        top: 10.75vh;
         right: -5vh;
     }
 }
 @keyframes vkBack {
     0%{
-        top: 9.75vh;
+        top: 10.75vh;
         right: 3.7vh;
     }
     100%{
-        top: 9.75vh;
+        top: 10.75vh;
         right: -5vh;
     }
 }
 @keyframes tg {
     0%{
-        top: 9.75vh;
+        top: 10.75vh;
         right: -5vh;
     }
     100%{
-        top: 9.75vh;
+        top: 10.75vh;
         right: 10.7vh;
+    }
+}
+@media (max-width: 768px){
+    #flattershay{
+        display: none;
+    }
+    #reg{
+        padding-left: 10vw;
+        padding-right: 10vw;
+        width: 70vw;
+        height: 50%;
+        margin: 0;
+    }
+}
+@media (max-width: 1354px){
+    body{
+        justify-content: center;
+    }
+    #reg{
+        width: 40%;
+        margin: 0;
+    }
+}
+@media (max-width: 480px){
+    label{
+        display: none;
+    }
+    #flattershay{
+        display: none;
+    }
+    #reg{
+        padding-left: 10vw;
+        padding-right: 10vw;
+        width: 70vw;
+        height: 50%;
+        margin: 0;
     }
 }
