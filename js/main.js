@@ -1,65 +1,63 @@
-document.getElementById("reg-form").addEventListener("submit", checkForm)
 
-function checkForm(event) {
+const name = document.getElementById("name");
+const password = document.getElementById("password");
+const passwordConfirm = document.getElementById("confirmPassword");
+const email = document.getElementById("email");
+
+let error = document.getElementById("error");
+clickCountReg = 0;
+clickCountReg2 = 0;
+let fail ="";
+
+document.getElementById("registrationForm").addEventListener("submit", chekForm);
+
+function chekForm(event) {
     event.preventDefault();
-    let el = document.getElementById("reg-form");
 
-    let name = el.username.value;
-    let pass = el.pass.value;
-    let conf = el.conf_pass.value;
-    let email = el.email.value;
-
-    let fail = "";
-
-    if (name === "" || pass === "" || conf === "" || email === "") {
-        fail = "Fill in the blanks!"; //Пустые поля
-    } else if (name.length < 3 || name.length > 16) {
-        fail = "The minimum name length is 3 characters, the maximum is 16!"; //Длина никнейма
-    } else if (pass !== conf) {
-        fail = "Passwords must match!"; //Пароли не совпадают
-    } else if (pass.length < 8 || pass.length > 24) {
-        fail = "The minimum password length is 8 characters, the maximum is 24!"; //Длина пароля
+    if (name.value===""||password.value===""||passwordConfirm.value===""||email.value==="") {
+        fail = "Fill in the blanks!";
+    }else if(name.value.length<3){
+        fail = "The minimum name length is 3 characters, the maximum is 16!";
+    }else if(password.value.length<8 || password.value.length>24){
+        fail = "The minimum password length is 8 characters, the maximum is 24!";
+    }else if(password.value !== passwordConfirm.value){
+        fail = "Passwords must match!";
     }
-    if (fail !== "") {
-        document.getElementById("error").innerHTML = fail;
+    if(fail!==""){
+        error.innerHTML = fail;
         return;
     }
-
-    alert("Все данные корректно введены");
-    window.location = "https://google.com";
+    alert("Thnx bro)")
+    name.value = "";
+    password.value = "";
+    email.value = "";
+    passwordConfirm.value = "";
 }
-//Видимость пароля
-document.getElementById("checkPass").addEventListener("click", function() {
+
+document.getElementById("visiblePas").addEventListener("click", function() {
     clickCountReg++
     if (clickCountReg % 2 === 1){
-        document.getElementById("pass").type = "text";
-        document.getElementById("checkPass").src = "css/img/invisible.png";
+        document.getElementById("password").type = "text";
+        document.getElementById("visiblePas").src = "css/img/invisible.png";
     }else{
-        document.getElementById("pass").type = "password";
-        document.getElementById("checkPass").src = "css/img/visible.png";
+        document.getElementById("password").type = "password";
+        document.getElementById("visiblePas").src = "css/img/visible.png";
     }
     return true;
 });
 //Видимость повтора пароля
-document.getElementById("checkPass2").addEventListener("click", function() {
+document.getElementById("visibleConfPas").addEventListener("click", function() {
     clickCountReg2++
     if (clickCountReg2 % 2 === 1){
-        document.getElementById("conf_pass").type = "text";
-        document.getElementById("checkPass2").src = "css/img/invisible.png";
+        document.getElementById("confirmPassword").type = "text";
+        document.getElementById("visibleConfPas").src = "css/img/invisible.png";
     }else{
-        document.getElementById("conf_pass").type = "password";
-        document.getElementById("checkPass2").src = "css/img/visible.png";
+        document.getElementById("confirmPassword").type = "password";
+        document.getElementById("visibleConfPas").src = "css/img/visible.png";
     }
     return true;
 });
-
-
-
-document.getElementById("checkPass2")
-
 let clickCount = 0;
-let clickCountReg = 0;
-let clickCountReg2 = 0;
 let con = document.getElementById("contacts")
 let vk = document.getElementById("vk")
 let tg = document.getElementById("tg")
